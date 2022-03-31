@@ -2,7 +2,6 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  /* height: 50vh; */
 }
 
 .clear-all-selected {
@@ -13,8 +12,15 @@ body {
   background-color: rgb(243, 239, 239);
 }
 
-h3 {
-  /* border-bottom: 1px solid gray; */
+img {
+  width: auto;
+  height: 20px;
+  align-self: center;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 ul {
