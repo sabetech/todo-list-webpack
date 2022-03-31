@@ -2,7 +2,6 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  /* height: 50vh; */
 }
 
 .clear-all-selected {

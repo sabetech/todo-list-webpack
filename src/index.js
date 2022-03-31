@@ -21,11 +21,7 @@ let todos = [
 
 const showList = () => {
   todos = _.orderBy(todos, ['index'], ['asc']);
-  todos.map((todo) => {
-    const input = document.createElement('input');
-    input.id = todo.index;
-    input.type = 'checkbox';
-
+  todos.forEach((todo) => {
     todoListEl.innerHTML += `<li><input type='checkbox'><label class='todo-desc'>${todo.description}</label></li>`;
   });
 };
