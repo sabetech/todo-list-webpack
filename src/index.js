@@ -9,7 +9,7 @@ imgRefreshEl.src = RefreshIcon;
 
 const myTodoStorage = new TodoStorage();
 
-window.onload = () => renderTodos(myTodoStorage.getExistingTodos());
+window.onload = () => renderTodos(myTodoStorage);
 
 todoListInputEl.addEventListener('keypress', (e) => {
   if ((e.key === 'Enter') && (e.target.value !== '')) {
@@ -17,17 +17,3 @@ todoListInputEl.addEventListener('keypress', (e) => {
     e.target.value = '';
   }
 });
-
-
-
-
-
-// const showList = () => {
-//   todos = _.orderBy(todos, ['index'], ['asc']);
-//   todos.forEach((todo) => {
-//     todoListEl.innerHTML +=
-// `<li><input type='checkbox'><label class='todo-desc'>${todo.description}</label></li>`;
-//   });
-// };
-
-// showList();
