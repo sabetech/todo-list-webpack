@@ -13,7 +13,6 @@ export default class TodoStorage {
   saveTodoEntry(tododescription) {
     const myNewTodoTask = new TodoTask(tododescription, this.existingTodos.length);
     this.existingTodos.push(myNewTodoTask);
-    renderTodos(this);
     this.saveToLocalStorage();
   }
 
@@ -29,12 +28,12 @@ export default class TodoStorage {
         return todo;
       });
 
-    renderTodos(this);
     this.saveToLocalStorage();
   }
 
   saveToLocalStorage() {
     localStorage.setItem('tododata', JSON.stringify(this.existingTodos));
+    renderTodos(this);
   }
 
   markAsComplete(index) {
@@ -48,7 +47,11 @@ export default class TodoStorage {
   }
 
   clearCompletedTasks() {
-    this.existingTodos = this.existingTodos.filter((todo) => todo.completed === true);
+    this.existingTodos = this.existingTodos.filter((todo) => todo.completed === false)
+      .map((todo, i) => {
+        todo.index = i;
+        return todo;
+      });
     this.saveToLocalStorage();
   }
 }

@@ -6,6 +6,7 @@ body {
 
 a {
   text-decoration: none;
+  color: grey;
 }
 
 .clear-all-selected {
@@ -14,6 +15,16 @@ a {
   padding-top: 22px;
   height: 30px;
   background-color: rgb(243, 239, 239);
+}
+
+.clear-all-selected:hover {
+  background-color: rgb(235, 230, 230);
+  cursor: pointer;
+}
+
+.clear-all-selected:focus {
+  background-color: rgb(211, 208, 208);
+  cursor: pointer;
 }
 
 img {
