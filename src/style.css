@@ -4,6 +4,10 @@ body {
   align-content: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .clear-all-selected {
   width: 100%;
   text-align: center;
@@ -33,7 +37,6 @@ li {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgb(226, 226, 226);
-  margin-bottom: 25px;
 }
 
 .main-app {
@@ -45,9 +48,12 @@ li {
 
 input[type="text"] {
   border: 0;
-  height: 30px;
-  font-size: 16px;
+}
+
+.type-todo-here {
   font-style: italic;
+  font-size: 16px;
+  height: 30px;
   width: 80%;
   padding: 5px;
 }
@@ -60,8 +66,24 @@ input[type="checkbox"] {
   width: 25px;
   height: 25px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .todo-desc {
   font-size: 18px;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.strikethrough-text {
+  text-decoration: line-through;
+}
+
+.list-action-icon {
+  margin-left: auto;
+}
+
+.li-background-highlight-edit {
+  background-color: bisque;
 }

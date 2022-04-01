@@ -1,6 +1,6 @@
 import './style.css';
-import TodoStorage from './storage';
-import renderTodos from './TodoListRenderer';
+import TodoStorage from './storage.js';
+import renderTodos from './TodoListRenderer.js';
 import RefreshIcon from './icons8-refresh-30.png';
 
 const todoListInputEl = document.querySelector('.type-todo-here');
