@@ -13,9 +13,42 @@ export default class TodoStorage {
   saveTodoEntry(tododescription) {
     const myNewTodoTask = new TodoTask(tododescription, this.existingTodos.length);
     this.existingTodos.push(myNewTodoTask);
+    renderTodos(this);
+    this.saveToLocalStorage();
+  }
 
-    console.log(this.existingTodos);
+  edit(index, updatedDescription) {
+    this.existingTodos.find((todo) => todo.index === index).description = updatedDescription;
+    this.saveToLocalStorage();
+  }
 
-    renderTodos(this.existingTodos);
+  delete(index) {
+    this.existingTodos = this.existingTodos.filter((todo) => index !== todo.index)
+      .map((todo, i) => {
+        todo.index = i;
+        return todo;
+      });
+
+    renderTodos(this);
+    this.saveToLocalStorage();
+  }
+
+  saveToLocalStorage() {
+    localStorage.setItem('tododata', JSON.stringify(this.existingTodos));
+  }
+
+  markAsComplete(index) {
+    this.existingTodos.find((todo) => todo.index === index).completed = true;
+    this.saveToLocalStorage();
+  }
+
+  revertMarkAsComplete(index) {
+    this.existingTodos.find((todo) => todo.index === index).completed = false;
+    this.saveToLocalStorage();
+  }
+
+  clearCompletedTasks() {
+    this.existingTodos = this.existingTodos.filter((todo) => todo.completed === true);
+    this.saveToLocalStorage();
   }
 }
