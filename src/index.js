@@ -1,29 +1,33 @@
-import _ from 'lodash';
 import './style.css';
+import TodoStorage from './storage';
+import renderTodos from './TodoListRenderer';
 import RefreshIcon from './icons8-refresh-30.png';
 
-const todoListEl = document.querySelector('.todo-list-el');
+const todoListInputEl = document.querySelector('.type-todo-here');
 const imgRefreshEl = document.querySelector('.refresh-icon');
 imgRefreshEl.src = RefreshIcon;
 
-let todos = [
-  {
-    description: 'Hey',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'spija koutj',
-    completed: false,
-    index: 1,
-  },
-];
+const myTodoStorage = new TodoStorage();
 
-const showList = () => {
-  todos = _.orderBy(todos, ['index'], ['asc']);
-  todos.forEach((todo) => {
-    todoListEl.innerHTML += `<li><input type='checkbox'><label class='todo-desc'>${todo.description}</label></li>`;
-  });
-};
+window.onload = () => renderTodos(myTodoStorage.getExistingTodos());
 
-showList();
+todoListInputEl.addEventListener('keypress', (e) => {
+  if ((e.key === 'Enter') && (e.target.value !== '')) {
+    myTodoStorage.saveTodoEntry(e.target.value);
+    e.target.value = '';
+  }
+});
+
+
+
+
+
+// const showList = () => {
+//   todos = _.orderBy(todos, ['index'], ['asc']);
+//   todos.forEach((todo) => {
+//     todoListEl.innerHTML +=
+// `<li><input type='checkbox'><label class='todo-desc'>${todo.description}</label></li>`;
+//   });
+// };
+
+// showList();
