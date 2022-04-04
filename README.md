@@ -12,6 +12,10 @@
 - Webpack
 - Linters (webhint, stylehint, eslint)
 
+## Live Demo
+
+[Live Link](https://sabetech.github.io/todo-list-webpack/)
+
 ## Getting Started
 
 To get this project up and running, git clone the project on your file system.
