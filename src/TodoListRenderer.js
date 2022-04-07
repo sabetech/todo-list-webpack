@@ -1,16 +1,17 @@
 import _ from 'lodash';
-import threedots from './icons8-menu-vertical-30.png';
-import trashcan from './icons8-trash-can-50.png';
+// import threedots from './icons8-menu-vertical-30.png';
+// import trashcan from './icons8-trash-can-50.png';
 
-const todoListEl = document.querySelector('.todo-list-el');
+
 
 export default function renderTodos(todoStorage) {
+  const todoListEl = document.querySelector('.todo-list-el');
   todoListEl.innerHTML = '';
   _.orderBy(todoStorage.getExistingTodos(), ['index'], ['asc']).forEach((todo) => {
     todoListEl.innerHTML += `<li id='lst_${todo.index}'>
             <input id='chk_${todo.index}' type='checkbox' class='checkbox-item' ${todo.completed ? 'checked' : ''} >
             <input id='txt_${todo.index}' type='text' class='todo-desc ${todo.completed ? 'strikethrough-text' : ''}' value='${todo.description}' >
-            <img id='img_${todo.index}' class='list-action-icon' alt='action icon' src='${threedots}'>
+            <img id='img_${todo.index}' class='list-action-icon' alt='action icon' src=''./icons8-menu-vertical-30.png'>
         </li>`;
   });
 
@@ -34,7 +35,7 @@ export default function renderTodos(todoStorage) {
       labelInput.parentElement.classList.add('li-background-highlight-edit');
       labelInput.classList.add('li-background-highlight-edit');
       const deleteEl = document.querySelector(`#img_${ev.target.id.split('_')[1]}`);
-      deleteEl.src = trashcan;
+      deleteEl.src = './icons8-trash-can-50.png';
       deleteEl.addEventListener('click', () => {
         todoStorage.delete(parseInt(ev.target.id.split('_')[1], 10));
       });
@@ -43,7 +44,7 @@ export default function renderTodos(todoStorage) {
     labelInput.addEventListener('blur', (ev) => {
       labelInput.parentElement.classList.remove('li-background-highlight-edit');
       labelInput.classList.remove('li-background-highlight-edit');
-      document.querySelector(`#img_${ev.target.id.split('_')[1]}`).src = threedots;
+      document.querySelector(`#img_${ev.target.id.split('_')[1]}`).src = './icons8-menu-vertical-30.png';
     });
 
     labelInput.addEventListener('keypress', (ev) => {
