@@ -1,11 +1,9 @@
 /**
  * @jest-environment jsdom
  */
-import TodoTask from './todotask.js';
 import TodoStorage from './storage.js';
 
 const storage = new TodoStorage();
-const todoTask = new TodoTask('New Task To Do!');
 
 document.body.innerHTML = '<div>'
     + '  <ul class="todo-list-el"></li>'

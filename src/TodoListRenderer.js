@@ -2,8 +2,6 @@ import _ from 'lodash';
 // import threedots from './icons8-menu-vertical-30.png';
 // import trashcan from './icons8-trash-can-50.png';
 
-
-
 export default function renderTodos(todoStorage) {
   const todoListEl = document.querySelector('.todo-list-el');
   todoListEl.innerHTML = '';
