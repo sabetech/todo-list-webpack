@@ -1,0 +1,65 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev jest
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\LENOVO\bin;C:\Python310\Scripts;C:\Python310;C:\Python38\Scripts;C:\Python38;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\xampp\php;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files\Java\jdk-10.0.2\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files\Git LFS;C:\flutter\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs;C:\Program Files\Go\bin;C:\Ruby31-x64\bin;C:\Users\LENOVO\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\LENOVO\Downloads\rar and zips\ffmpeg-20181208-fe0416f-win64-static\bin;C:\Program Files\Java\jdk-10.0.2\bin;C:\Users\LENOVO\AppData\Local\Android\Sdk\platform-tools;C:\Users\LENOVO\AppData\Local\Programs\Python\Python37-32;C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.1\bin;C:\flutter;C:\tools\dart-sdk\bin;C:\Users\LENOVO\AppData\Roaming\Pub\Cache\bin;C:\Users\LENOVO\AppData\Local\Programs\Python\Python37-32\Scripts;C:\xampp\mysql\bin;C:\Program Files\heroku\bin;C:\Users\LENOVO\AppData\Local\Yarn\bin;C:\Users\LENOVO\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO\AppData\Roaming\Composer\vendor\bin;C:\Program Files\nodejs;C:\Users\LENOVO\AppData\Roaming\npm;C:\Users\LENOVO\go\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  16.13.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\xampp\htdocs\Microverse\todo-list-webpack\package.json: Unexpected token j in JSON at position 337
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "todo-webpack",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "webpack",
+      "watch": "webpack --watch",
+      "start": "webpack serve --open"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {jes
+      "babel-eslint": "^10.1.0",
+      "css-loader": "^6.7.1",
+      "eslint": "^7.32.0",
+      "eslint-config-airbnb-base": "^14.2.1",
+      "eslint-plugin-import": "^2.25.4",
+      "hint": "^6.1.10",
+      "html-webpack-plugin": "^5.5.0",
+      "style-loader": "^3.3.1",
+      "stylelint": "^13.13.1",
+      "stylelint-config-standard": "^21.0.0",
+      "stylelint-csstree-validator": "^1.9.0",
+      "stylelint-scss": "^3.21.0",
+      "webpack": "^5.70.0",
+      "webpack-cli": "^4.9.2",
+      "webpack-dev-server": "^4.7.4"
+    },
+    "dependencies": {
+      "lodash": "^4.17.21"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
