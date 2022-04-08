@@ -53,6 +53,11 @@ describe('Testing Remove Todo Functionality', () => {
 });
 
 describe('Testing Updates on Todo Functionality', () => {
+  test('update todo task description', () => {
+    storage.edit(0, 'different modified task');
+    expect(storage.getExistingTodos()[0].description).toBe('different modified task');
+  });
+
   test('update todo index 0 to completed:true', () => {
     storage.saveTodoEntry('Test Entry 1');
     storage.markAsComplete(0);
